@@ -35,6 +35,8 @@ body {
 
     /* create 3d environment */
     perspective: 150rem;
+    /* position: relative; */
+    overflow: hidden;
 }
 
 .swing {
@@ -46,4 +48,160 @@ body {
 
     /* to share 3d sapce with before and after element */
     transform: preserve-3d;
+    position: absolute;
+    top: 50%;
+}
+
+.swing-1{
+    animation: swingAnim 20s infinite ease-in-out;
+}
+
+/* keyframes */
+@keyframes swingAnim {
+    0% {
+        transform: rotateX(70deg)rotateZ(-40deg)rotateY(5deg)translateY(100rem);
+    }
+
+    20% {
+        transform: rotateX(70deg)rotateZ(-40deg)rotateY(5deg)translateY(21rem);
+    }
+
+    25% {
+        transform: rotateX(70deg)rotateZ(-40deg)rotateY(5deg)translateY(27rem);
+    }
+
+    35%, 40% {
+        transform: rotateX(70deg)rotateZ(-40deg)rotateY(5deg)translateY(0);
+    }
+
+    50% {
+        transform: rotateX(70deg)rotateZ(-40deg)rotateY(5deg)translateY(-60rem);
+    }
+
+    55% {
+        transform: rotateX(70deg)rotateZ(-40deg)rotateY(5deg)translateY(-55rem);
+    }
+
+    65%, 70% {
+        transform: rotateX(70deg)rotateZ(-40deg)rotateY(5deg)translateY(-84rem);
+    }
+
+    100% {
+        transform: rotateX(70deg)rotateZ(-40deg)rotateY(5deg)translateY(-800rem);
+    }
+
+}
+
+.swing::before {
+    content: '';
+    width: 1rem;
+    height: 100%;
+    background-color: #b4bb65;
+    /* background-color: red; */
+    position: absolute;
+    /* rotates from center */
+    transform: rotateY(90deg);
+    /* rotate from left */
+    transform-origin: left;
+
+}
+
+.swing::after {
+    content: '';
+    height: 1rem;
+    width: 100%;
+    background-color: #e2ec6c;
+    position: absolute;
+    bottom: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+
+}
+
+.circle {
+    width: 3rem;
+    height: 3rem;
+    background-color: #c5c757;
+    border-radius: 50%;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    transform-style: preserve-3d;
+}
+
+.circle-1 {
+    top: 1rem;
+    left: 1rem;
+    /* background-color: green; */
+}
+
+.circle-2 {
+    top: 1rem;
+    right: 1rem;
+    /* background-color: blue; */
+
+}
+
+.circle-3 {
+    bottom: 1rem;
+    right: 1rem;
+    /* background-color: tomato; */
+}
+
+.circle-4 {
+    bottom: 1rem;
+    left: 1rem;
+    /* background-color: orange; */
+}
+
+.circle::before {
+    content: '';
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #e9d8d8;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateZ(.3rem);
+
+}
+
+.rope {
+    height: 40rem;
+    width: 0.3rem;
+    background: #fff;
+    position: absolute;
+    transform: translateZ(20rem) rotateX(90deg) rotateY(90deg);
+    transform-origin: top;
+}
+
+.rope-1 {
+    top: 10rem;
+    left: 2.5rem;
+}
+
+.rope-2 {
+    top: 10rem;
+    right: 2.5rem;
+}
+
+.rope::before {
+    content: '';
+    width: 0.3rem;
+    height: 23rem;
+    background-color: red;
+    background-color: #fff;
+    position: absolute;
+    transform: translateY(-23rem) rotateZ(21deg);
+    transform-origin: bottom;
+}
+
+.rope::after {
+    content: '';
+    width: 0.3rem;
+    height: 23rem;
+    background-color: red;
+    background-color: #fff;
+    position: absolute;
+    transform: translateY(-23rem) rotateZ(-21deg);
+    transform-origin: bottom;
 }
