@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 62.5% of 16px = 10px */
+    /* set 1rem = 10px using 62.5% of 16px 
+    1rem = 10px
+    1.5rem = 15px
+    3rem = 30px
+    6rem = 60px
+    .1rem = 1px
+     */
+}
+
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+/* ======================================================================= */
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(../images/landing-page-modal-bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.banner-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-text h1 {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 8rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    /* letter-spacing: 2px; */
+    margin-bottom: 3rem;
+
+}
+
+.banner-text p {
+    color: #eee;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    text-align: right;
+
+}
+
+.btns {
+    position: absolute;
+    top: 5rem;
+    right: 6rem;
+}
+
+.btn {
+    width: 17rem;
+    padding: 1rem 1.5rem;
+    margin-right: 2rem;
+    border-radius: 5rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    border: 2px solid tomato;
+    transition: transform .3s;
+}
+
+.login-btn {
+    background-color: tomato;
+}
+
+.signup-btn {
+    background-color: transparent;
+}
+
+.btn:hover {
+    transform: translateY(-.2rem);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* common styles for signup form and login form */
+.modal {
+    width: 40rem;
+    background: linear-gradient(rgba(148, 42, 42, .8), rgba(185, 129, 129, .6)), url(../images/landing-page-modal-bg.jpg) center no-repeat;
+    background-size: cover;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
+
+    /* hide the form before showing it using javascript */
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* show modal forms using javascript */
+.display{
+    opacity: 1;
+    visibility:visible;
+}
+
+.x-btn {
+    position: absolute;
+    right: 2rem;
+    font-size: 5rem;
+    color: #222;
+    cursor: pointer;
+}
+
+.form-header {
+    text-align: center;
+    margin: 8rem 0rem 15rem 0rem;
+
+}
+
+.form-header h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+
+.form-header h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.input-group input {
+    width: 25rem;
+    padding: 1.5rem 1.5rem 1.5rem 5rem;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    background: rgba(0, 0, 0, 0.6);
+    /* font-family: "Josefin Sans", sans-serif; */
+    font-size: 1.6rem;
+    color: #ddd;
+}
+
+.input-group i {
+    position: absolute;
+    top: 1.3rem;
+    left: 1.7rem;
+    font-size: 1.8rem;
+    color: #aaa;
+}
+
+.form button {
+    width: 31rem;
+    padding: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+    background-color: #d867d8;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin: 1rem 0rem 5rem 0rem;
+    box-shadow: 0 .5rem 2rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.form button:hover {
+    transform: translateY(-.2rem);
+    box-shadow: 0 .8rem 2.5rem rgba(0, 0, 0, 0.3);
+}
+
+.form button:active {
+    transform: translateY(0);
+}
