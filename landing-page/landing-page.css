@@ -51,9 +51,9 @@ body {
     width: 40%;
     height: 100%;
     /* display: flex; */
-    font-display: column;
     /* justify-content: center; */
     /* overwrite align-items:center */
+    flex-direction: column;
     align-items: flex-start;
 
 }
@@ -102,7 +102,7 @@ body {
 /* share 3d environment with box sides  */
 .box {
     transform-style: preserve-3d;
-    transform: rotateY(45deg)rotateX(30deg);
+    transform: rotateY(45deg) rotateX(30deg);
     position: relative;
 
     display: flex;
@@ -158,7 +158,7 @@ body {
 }
 
 .box-6 {
-    left: 0rem;
+    left: 0;
     top: 25rem;
 
     animation: boxAnim 100s -50s infinite linear;
@@ -222,12 +222,12 @@ body {
 }
 
 .top-side {
-    transform: rotateX(90deg)translateZ(3.5rem);
+    transform: rotateX(90deg) translateZ(3.5rem);
     /* background-color: red; */
 }
 
 .bottom-side {
-    transform: rotateX(90deg)translateZ(-3.5rem);
+    transform: rotateX(90deg) translateZ(-3.5rem);
     /* background-color: red; */
 }
 
@@ -242,45 +242,45 @@ body {
 }
 
 .right-side {
-    transform: rotateY(-90deg)translateX(3.5rem);
+    transform: rotateY(-90deg) translateX(3.5rem);
     transform-origin: right;
     /* background-color: yellow; */
 }
 
 .left-side {
-    transform: rotateY(90deg)translateX(-3.5rem);
+    transform: rotateY(90deg) translateX(-3.5rem);
     transform-origin: left;
     /* background-color: yellow; */
 }
 
-.active.top-side {
-    transform: rotateX(90deg)translateZ(8rem);
+.active .top-side {
+    transform: rotateX(90deg) translateZ(8rem);
     /* background-color: red; */
 }
 
-.active.bottom-side {
-    transform: rotateX(90deg)translateZ(-8rem);
+.active .bottom-side {
+    transform: rotateX(90deg) translateZ(-8rem);
     /* background-color: red; */
 }
 
-.active.front-side {
+.active .front-side {
     transform: translateZ(8rem);
     /* background-color: blue; */
 }
 
-.active.back-side {
+.active .back-side {
     transform: translateZ(-8rem);
     /* background-color: blue; */
 }
 
-.active.right-side {
-    transform: rotateY(-90deg)translateX(8rem);
+.active .right-side {
+    transform: rotateY(-90deg) translateX(8rem);
     transform-origin: right;
     /* background-color: yellow; */
 }
 
-.active.left-side {
-    transform: rotateY(90deg)translateX(-8rem);
+.active .left-side {
+    transform: rotateY(90deg) translateX(-8rem);
     transform-origin: left;
     /* background-color: yellow; */
 }

@@ -1,6 +1,6 @@
 // select all the boxes, span elements and buttons
 const boxes = document.querySelectorAll(".box");
-const heading = document.querySelector("heading span");
+const heading = document.querySelector(".heading span");
 const btn = document.querySelector(".btn");
 
 // arrays for colors and technologies
@@ -16,6 +16,9 @@ const colors = [
 
 const techs = ["JS", "React", "Vue", "AngularJS", "Node", "Sass", "Ember"];
 
+// variable for counter
+let current = 1;
+
 // function to change colors of heading, heading names and buttons background   color
 const textStyle = () => {
   // heading color change
@@ -27,9 +30,6 @@ const textStyle = () => {
   // color change for text inside button
   btn.firstElementChild.textContent = techs[current - 1];
 };
-
-// variable for counter
-let current = 1;
 
 // rotate and move the boxes at certain interval
 let interval = setInterval(() => {
