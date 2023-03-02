@@ -96,6 +96,24 @@ body {
     transform: translateY(0);
 }
 
+.form-container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+
+.disable {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 /* common styles for signup form and login form */
 .modal {
     width: 40rem;
@@ -111,12 +129,13 @@ body {
     /* hide the form before showing it using javascript */
     opacity: 0;
     visibility: hidden;
+    transition: all .5s;
 }
 
 /* show modal forms using javascript */
-.display{
+.display {
     opacity: 1;
-    visibility:visible;
+    visibility: visible;
 }
 
 .x-btn {
