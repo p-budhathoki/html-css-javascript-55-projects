@@ -1,0 +1,141 @@
+/* ======================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 62.5% of 16px = 10px */
+    /* set 1rem = 10px using 62.5% of 16px 
+    1rem = 10px
+    1.5rem = 15px
+    3rem = 30px
+    6rem = 60px
+    .1rem = 1px
+     */
+}
+
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+/* ======================================================================= */
+body {
+    font-family: "Dosis", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(148, 48, 48, .2), rgba(167, 67, 67, .4)), url(../images/hamburger-menu-bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    width: 30rem;
+    height: 100%;
+    background-color: #262626;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20% 0% 0% 60%;
+    /* hide navbar */
+    right: -30rem;
+    transition: right .8s cubic-bezier(1, 0, 0, 1);
+}
+
+.change {
+    right: 0;
+}
+
+.hamburger-menu {
+    width: 3.5rem;
+    height: 3rem;
+    /* background-color: red; */
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.line {
+    width: 100%;
+    height: 0.3rem;
+    background-color: chocolate;
+    transition: all .8s;
+}
+
+.change .line-1 {
+    /* transform: rotateZ(-45deg) translate(-8px, 6px); */
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.change .line-2 {
+    opacity: 0;
+}
+
+.change .line-3 {
+    /* transform: rotateZ(45deg) translate(-8px, -6px); */
+    transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.nav-list {
+    text-align: right;
+}
+
+.nav-item {
+    list-style-type: none;
+    margin: 2.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: #eee;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0.3rem 0rem;
+
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: '';
+    width: 100%;
+    height: 0.2rem;
+    background-color: chocolate;
+    position: absolute;
+    left: 0;
+    /* hide the line by setting scale value to 0 */
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.nav-link::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+.nav-link::before {
+    top: 0;
+    transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
