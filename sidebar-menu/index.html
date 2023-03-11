@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Menu</title>
+
+    <!--==============================================================-->
+    <!-- <link rel="stylesheet" href="../normalize.css" /> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,600,700|Slabo+27px&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <!--==============================================================-->
+
+    <link rel="stylesheet" href="sidebar-menu.css" />
+    <!-- <link rel="stylesheet" href="Untitled-1.css" /> -->
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- navbar / sidebar -->
+      <nav class="sidebar">
+        <div class="hamburger-menu">
+          <div class="line line-1"></div>
+          <div class="line line-2"></div>
+          <div class="line line-3"></div>
+        </div>
+        <!-- ===================card start ======================== -->
+        <div class="card">
+          <!--  avatar of administrator  -->
+          <div class="card-img">
+            <img
+              src="../images/admin.png"
+              alt="Admin Image"
+              class="admin-image" />
+          </div>
+          <!-- card body -->
+          <div class="card-body">
+            <h2 class="card-title">John Smith</h2>
+            <p class="card-subtitle">Administrator</p>
+          </div>
+        </div>
+        <!-- ===================card end ======================== -->
+
+        <!-- ===================form start ======================== -->
+        <form action="" class="search-form">
+          <input type="text" class="search-input" placeholder="Search" />
+          <button type="button" class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <!-- ===================form end ======================== -->
+
+        <!-- ===================Main list start ================= -->
+
+        <ul class="nav-list">
+          <!-- Main list item 1 start-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-tachometer-alt"></i>
+              <span class="nav-link-text">Dashboard</span>
+              <i class="fas fa-angle-right"></i>
+            </a>
+
+            <!-- Drop down menu list for item 1 start -->
+            <ul class="subnav-list">
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Dashboard 1</span>
+                </a>
+              </li>
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Dashboard 2</span>
+                </a>
+              </li>
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Dashboard 3</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Main list item 1 end-->
+
+          <!-- Main list item 2 start-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-shopping-cart"></i>
+              <span class="nav-link-text">E-commerce</span>
+              <i class="fas fa-angle-right"></i>
+            </a>
+
+            <!-- Drop down menu list for item 2 start -->
+            <ul class="subnav-list">
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Products</span>
+                </a>
+              </li>
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Orders</span>
+                </a>
+              </li>
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Credit Card</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Main list item 2 end-->
+
+          <!-- Main list item 3 start-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-gem"></i>
+              <span class="nav-link-text">Components</span>
+              <i class="fas fa-angle-right"></i>
+            </a>
+
+            <!-- Drop down menu list for item 3 start -->
+            <ul class="subnav-list">
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>General</span>
+                </a>
+              </li>
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Icons</span>
+                </a>
+              </li>
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Tables</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Main list item 3 end-->
+
+          <!-- Main list item 4 start -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-chart-line"></i>
+              <span class="nav-link-text">Charts</span>
+              <i class="fas fa-angle-right"></i>
+            </a>
+
+            <!-- Drop down menu list for item 4 start -->
+            <ul class="subnav-list">
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Pie Chart</span>
+                </a>
+              </li>
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Line Chart</span>
+                </a>
+              </li>
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Bar Chart</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Main list item 4 end -->
+
+          <!-- Main list item 5 start -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-map-marker-alt"></i>
+              <span class="nav-link-text">Maps</span>
+              <i class="fas fa-angle-right"></i>
+            </a>
+
+            <!-- Drop down menu list for item 4 start -->
+            <ul class="subnav-list">
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Google Maps</span>
+                </a>
+              </li>
+              <li class="subnav-item">
+                <a href="#" class="subnav-link">
+                  <i class="far fa-circle"></i>
+                  <span>Open Street Map</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Main list item 5 end -->
+        </ul>
+        <!-- ==================== Bottom List================= -->
+        <ul class="bottom-list">
+          <li class="bottom-item">
+            <a href="#" class="bottom-link">
+              <span>5</span>
+              <i class="fas fa-bell"></i>
+            </a>
+          </li>
+          <li class="bottom-item">
+            <a href="#" class="bottom-link">
+              <span>7</span>
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+          <li class="bottom-item">
+            <a href="#" class="bottom-link">
+              <span>1</span>
+              <i class="fas fa-cog"></i>
+            </a>
+          </li>
+          <li class="bottom-item">
+            <a href="#" class="bottom-link">
+              <i class="fas fa-power-off"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- =================== Main list end ================= -->
+      </nav>
+      <!-- Main Section -->
+      <section class="main-section">
+        <header class="header">
+          <h1 class="heading">Dashboard</h1>
+        </header>
+      </section>
+    </div>
+    <script src="sidebar-menu.js"></script>
+  </body>
+</html>
