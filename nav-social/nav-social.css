@@ -1,0 +1,146 @@
+/* ======================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 62.5% of 16px = 10px */
+    /* set 1rem = 10px using 62.5% of 16px 
+    1rem = 10px
+    1.5rem = 15px
+    3rem = 30px
+    6rem = 60px
+    .1rem = 1px
+     */
+}
+
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+/* ======================================================================= */
+* {
+    font-family: "Quicksand", serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.follow, .menu-link {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-right: 4rem;
+    color: #fff;
+}
+
+.follow {
+    pointer-events: auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* to not display menu on hover */
+    pointer-events: none;
+}
+
+.menu:hover {
+    pointer-events: auto;
+}
+
+.line {
+    width: 10rem;
+    height: 0.1rem;
+    margin-right: 5rem;
+    position: relative;
+}
+
+/* display .line using ::after pseudo element */
+.line::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* make width  : 0 by default */
+    width: 0;
+    transition: width .5s;
+}
+
+.menu:hover .line::after {
+    width: 100%;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.menu-link {
+    text-decoration: none;
+    position: relative;
+    top: 5rem;
+    opacity: 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.menu:hover .menu-link {
+    top: 0;
+    opacity: 1;
+}
+
+.menu-link:nth-child(1) {
+    transition: top .5s .1s, opacity .5s .1s, background-color .3s;
+}
+
+.menu-link:nth-child(2) {
+    transition: top .5s .2s, opacity .5s .2s, background-color .3s;
+}
+
+.menu-link:nth-child(3) {
+    transition: top .5s .3s, opacity .5s .3s, background-color .3s;
+}
+
+.menu-link:nth-child(4) {
+    transition: top .5s .4s, opacity .5s .4s, background-color .3s;
+}
+
+.menu-link:nth-child(5) {
+    transition: top .5s .5s, opacity .5s .5s, background-color .3s;
+}
+
+.menu-link:nth-child(1):hover {
+    background-color: #3b5998;
+}
+
+.menu-link:nth-child(2):hover {
+    background-color: #3f729b;
+}
+
+.menu-link:nth-child(3):hover {
+    background-color: #55acee;
+}
+
+.menu-link:nth-child(4):hover {
+    background-color: #0077b5;
+}
+
+.menu-link:nth-child(5):hover {
+    background-color: #cd201f;
+}
