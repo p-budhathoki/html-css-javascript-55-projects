@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up Sign in form</title>
+
+    <!--==============================================================-->
+    <!-- <link rel="stylesheet" href="../normalize.css" /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+
+    <!--==============================================================-->
+
+    <link rel="stylesheet" href="signup-in-form.css" />
+    <!-- <link rel="stylesheet" href="Untitled-1.css" /> -->
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- heading -->
+      <h1 class="heading">
+        <span class="heading-span-1">Sign</span>
+        <span class="heading-span-2">In</span>
+      </h1>
+
+      <!-- button -->
+      <div class="buttons">
+        <button class="signin-btn">SignIn</button>
+        <button class="signup-btn">SignUp</button>
+      </div>
+
+      <!-- form background -->
+      <div class="form-bg"></div>
+
+      <!-- form -->
+      <form action="" class="form sign-in">
+        <!-- usernam -->
+        <div class="form-input-wrapper">
+          <input
+            type="text"
+            autocomplete="off"
+            id="username"
+            placeholder="Your Name"
+            class="form-input" />
+          <p class="message">Error Message</p>
+        </div>
+        <!-- email -->
+        <div class="form-input-wrapper">
+          <input
+            type="text"
+            class="form-input"
+            autocomplete="off"
+            id="email"
+            placeholder="Email Address" />
+          <p class="message">Error Message</p>
+        </div>
+        <!-- password -->
+        <div class="form-input-wrapper">
+          <input
+            type="password"
+            class="form-input"
+            autocomplete="off"
+            id="password"
+            placeholder="Password" />
+          <p class="message">Error Message</p>
+        </div>
+        <!-- password confirmation -->
+        <div class="form-input-wrapper">
+          <input
+            type="password"
+            class="form-input"
+            autocomplete="off"
+            id="password2"
+            placeholder="Confirm Password" />
+          <p class="message">Error Message</p>
+        </div>
+        <input type="submit" class="form-btn" value="Submit" />
+      </form>
+    </div>
+
+    <script src="signup-in-form.js"></script>
+  </body>
+</html>
