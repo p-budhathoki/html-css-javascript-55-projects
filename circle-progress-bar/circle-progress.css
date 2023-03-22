@@ -1,0 +1,101 @@
+/* ======================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 62.5% of 16px = 10px */
+    /* set 1rem = 10px using 62.5% of 16px 
+    1rem = 10px
+    1.5rem = 15px
+    3rem = 30px
+    6rem = 60px
+    .1rem = 1px
+     */
+}
+
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+/* ======================================================================= */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 200vh;
+    background-color: #555;
+}
+
+.progressbar {
+    width: 40rem;
+    height: 40rem;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.half-circle, .half-circle-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transform-origin: right center;
+}
+
+.half-circle:nth-child(1) {
+    background-color: green;
+    background-color: #b60000;
+}
+
+
+.half-circle:nth-child(2) {
+    background-color: blue;
+    background-color: #b60000;
+}
+
+.half-circle-top {
+    background-color: orange;
+    background-color: white;
+}
+
+.progressbar:hover .half-circle:nth-child(1) {
+    /* transform: rotate(180deg);
+    transition: transform 1s linear; */
+}
+
+.progressbar:hover .half-circle:nth-child(2) {
+    /* transform: rotate(360deg);
+    transition: transform 2s linear; */
+}
+
+.progressbar:hover .half-circle-top {
+    /* opacity: 0;
+    transition: opacity 0s 1s; */
+}
+
+.progressbar-circle {
+    width: 39.4rem;
+    height: 39.4rem;
+    background-color: #000;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 4rem;
+    /* display: none; */
+    z-index: 10;
+}
