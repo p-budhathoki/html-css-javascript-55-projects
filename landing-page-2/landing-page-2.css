@@ -1,0 +1,75 @@
+/* ======================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 62.5% of 16px = 10px */
+    /* set 1rem = 10px using 62.5% of 16px 
+    1rem = 10px
+    1.5rem = 15px
+    3rem = 30px
+    6rem = 60px
+    .1rem = 1px
+     */
+}
+
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+/* ======================================================================= */
+.container {
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgb(184, 165, 119); */
+}
+
+.landing {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .8)), url(../images/landing-page-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center top;
+    animation: landingAnim 4s forwards;
+}
+
+@keyframes landingAnim {
+    0%, 50% {
+        clip-path: polygon(50% 0, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0, 30% 0);
+    }
+
+    100% {
+        clip-path: polygon(50% 4%, 70% 10%, 95% 0%, 95% 87%, 5% 100%, 5% 15%, 31% 10%);
+        background-position: center bottom;
+    }
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(184, 165, 119); */
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform-origin: top;
+    animation: bgAnim 2s forwards;
+}
+
+@keyframes bgAnim {
+    0%, 50% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(0);
+    }
+}
