@@ -1,0 +1,172 @@
+/* ======================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 62.5% of 16px = 10px */
+    /* set 1rem = 10px using 62.5% of 16px 
+    1rem = 10px
+    1.5rem = 15px
+    3rem = 30px
+    6rem = 60px
+    .1rem = 1px
+     */
+}
+
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+/* ======================================================================= */
+.container {
+    font-family: 'Josefin Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/invisible-card-bg.jpg) no-repeat center;
+}
+
+.card-wrapper {
+    height: 60rem;
+    width: 40rem;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/invisible-card-bg.jpg) no-repeat center;
+    transition: box-shadow 1s;
+    overflow: hidden;
+}
+
+.card-wrapper:hover {
+    box-shadow: 0 0 3rem whitesmoke;
+}
+
+.card {
+    position: absolute;
+    top: -100%;
+    /* display: none; */
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(190deg, rgba(21, 199, 30, .8) 50%, rgba(233, 67, 67, .8)0);
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* color: #000; */
+    transition: top .3s 1.5s;
+}
+
+.card-wrapper:hover .card {
+    top: 0;
+}
+
+.card-img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 1.5rem;
+    border: .2rem solid #fff;
+    padding: 1rem;
+    box-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+.card-heading {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.3rem;
+    background: linear-gradient(#0a9751, #06831b);
+    width: 70%;
+    text-align: center;
+    padding: 0.5rem 0rem;
+    transform: perspective(1000px) skew(-20deg) rotateY(40deg);
+}
+
+.card-paragraph {
+    font-size: 1.8rem;
+    color: #ddd;
+    width: 85%;
+    text-align: justify;
+    position: relative;
+}
+
+.card-paragraph::first-letter {
+    margin-left: 4rem;
+}
+
+.card-paragraph i {
+    color: whitesmoke;
+    font-size: 2.5rem;
+    font-style: italic;
+    position: absolute;
+}
+
+.card-paragraph i:first-child {
+    top: -10%;
+}
+
+.card-paragraph i:last-child {
+    bottom: -10%;
+    margin-left: 1rem;
+}
+
+.card-icons {
+    list-style-type: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.card-icon-link {
+    text-decoration: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    transition: color .3s;
+}
+
+.card-icon-link:hover {
+    border: 1px solid #1b5cf5;
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: #fff;
+    transition: color .3s;
+}
+
+.card-icon-link:hover .card-icon {
+    color: #1b5cf5;
+}
+
+.card-btn {
+    border: none;
+    outline: none;
+    width: 15rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    border-radius: 5rem;
+    background: linear-gradient(#6837ee, #0d2b7e);
+    color: #ddd;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
