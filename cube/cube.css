@@ -1,0 +1,222 @@
+/* ======================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    /* 62.5% of 16px = 10px */
+    /* set 1rem = 10px using 62.5% of 16px 
+    1rem = 10px
+    1.5rem = 15px
+    3rem = 30px
+    6rem = 60px
+    .1rem = 1px
+     */
+}
+
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+/* ======================================================================= */
+.container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)), url(../images/cube-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.viewport {
+    width: 42vw;
+    height: 21vw;
+    /* background: rgb(153, 159, 146); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 150rem;
+}
+
+.viewport::after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 20%;
+    background-color: #000;
+    z-index: -1;
+    top: 140%;
+    left: -10%;
+    filter: blur(5rem);
+}
+
+.cube {
+    width: 100%;
+    height: 33.33%;
+    background-color: #ccc;
+    transform-style: preserve-3d;
+    position: relative;
+    /* front face 0deg */
+    /* transform: rotateY(0); */
+    /* back face 180deg */
+    /* transform: rotateY(180deg); */
+    /* left face 90deg */
+    transform: rotateY(90deg);
+    /* right face -90deg */
+    /* transform: rotateY(-90deg); */
+}
+
+.cube-1 {
+    transition: transform .4s;
+}
+
+.cube-2 {
+    z-index: 10;
+    transition: transform .4s .2s;
+}
+
+.cube-3 {
+    transition: transform .4s .4s;
+}
+
+
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    /* opacity: 0.7; */
+    font-size: 5rem;
+}
+
+.front {
+    transform: translateZ(21vw);
+}
+
+.cube-1 .front {
+    background: url(../images/cube-slide-img-1.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cube-2 .front {
+    background: url(../images/cube-slide-img-1.jpg) no-repeat 50% -7vw;
+    background-size: cover;
+}
+
+.cube-3 .front {
+    background: url(../images/cube-slide-img-1.jpg) no-repeat 50% -14vw;
+    background-size: cover;
+}
+
+.cube-1 .back {
+    background: url(../images/cube-slide-img-2.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cube-2 .back {
+    background: url(../images/cube-slide-img-2.jpg) no-repeat 50% -7vw;
+    background-size: cover;
+}
+
+.cube-3 .back {
+    background: url(../images/cube-slide-img-2.jpg) no-repeat 50% -14vw;
+    background-size: cover;
+}
+
+.cube-1 .left {
+    background: url(../images/cube-slide-img-3.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cube-2 .left {
+    background: url(../images/cube-slide-img-3.jpg) no-repeat 50% -7vw;
+    background-size: cover;
+}
+
+.cube-3 .left {
+    background: url(../images/cube-slide-img-3.jpg) no-repeat 50% -14vw;
+    background-size: cover;
+}
+
+.cube-1 .right {
+    background: url(../images/cube-slide-img-4.jpg) no-repeat 50% 0;
+    background-size: cover;
+}
+
+.cube-2 .right {
+    background: url(../images/cube-slide-img-4.jpg) no-repeat 50% -7vw;
+    background-size: cover;
+}
+
+.cube-3 .right {
+    background: url(../images/cube-slide-img-4.jpg) no-repeat 50% -14vw;
+    background-size: cover;
+}
+
+.back {
+    transform: translateZ(-21vw) rotateY(180deg);
+}
+
+.left {
+    transform: translateX(-21vw) rotateY(-90deg);
+}
+
+.right {
+    transform: translateX(21vw) rotateY(90deg);
+}
+
+.top {
+    height: 42vw;
+    background-color: #111;
+    transform: translateY(-21vw) rotateX(90deg);
+}
+
+.bottom {
+    height: 42vw;
+    background-color: #111;
+    transform: translateY(-14vw) rotateX(-90deg);
+}
+
+.control {
+    position: absolute;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+    height: 4rem;
+    border: .1rem solid whitesmoke;
+    background-color: rgba(59, 52, 50, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.control:hover {
+    background-color: rgba(42, 38, 36, .8);
+}
+
+.control i {
+    pointer-events: none;
+}
+
+.left-arrow {
+    top: 50%;
+    left: -35%;
+}
+
+.right-arrow {
+    top: 50%;
+    left: 135%;
+}
+
+.play-pause {
+    top: 140%;
+    left: 120%;
+}
